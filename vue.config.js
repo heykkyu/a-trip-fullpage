@@ -1,5 +1,7 @@
 module.exports = {
-  publicPath: "/",
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/tripFullpage/'
+    : '/',
   outputDir: 'docs',
   lintOnSave: false,
 }
