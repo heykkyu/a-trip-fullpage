@@ -3,7 +3,7 @@
     <div class="slide">
       <p>Where you wanna go?</p>
       <video controls="controls" loop muted data-autoplay>
-        <source src="/../images/main.mp4" type="video/mp4">
+        <source src="/images/main.mp4" type="video/mp4">
       </video>
     </div>
   </div>
