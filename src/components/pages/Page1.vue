@@ -5,8 +5,8 @@
       <!-- <img alt="Vue logo" src="../../assets/logo.png"> -->
 
       <video controls="controls" loop muted data-autoplay>
-        <source src="../../assets/main.mp4" type="video/mp4">
-        <!-- <source src="https://heykkyu.github.io/trip-fullpage/main.mp4" type="video/mp4"> -->
+        <!-- <source src="../../assets/main.mp4" type="video/mp4"> -->
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
       </video>
     </div>
   </div>
