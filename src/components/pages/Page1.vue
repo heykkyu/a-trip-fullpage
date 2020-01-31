@@ -2,8 +2,11 @@
   <div class="TripPage1">
     <div class="slide">
       <p>Where you wanna go?</p>
+      <!-- <img alt="Vue logo" src="../../assets/logo.png"> -->
+
       <video controls="controls" loop muted data-autoplay>
-        <source src="/images/main.mp4" type="video/mp4">
+        <!-- <source src="../../assets/main.mp4" type="video/mp4"> -->
+        <source src="https://heykkyu.github.io/trip-fullpage/main.mp4" type="video/mp4">
       </video>
     </div>
   </div>
