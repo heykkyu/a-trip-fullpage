@@ -9,7 +9,7 @@
       <full-page ref="fullpage" :options="options" id="fullpage">
           <div class="section">
             <trip-page1
-            
+
             ></trip-page1>
           </div>
           <div class="section">
@@ -117,6 +117,7 @@
         color: #42b983;
     }
     * {
+      font-family: 'Source Sans Pro', sans-serif;
       text-align: center;
     }
 </style>

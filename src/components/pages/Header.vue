@@ -38,7 +38,6 @@ export default {
     width: 100%;
     li {
       a {
-        font-family: 'Roboto', sans-serif;
         color: #fff;
         text-decoration: none;
         font-size: 16px;

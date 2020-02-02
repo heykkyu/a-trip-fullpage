@@ -1,12 +1,9 @@
 <template>
   <div class="TripPage1">
-      <!-- <h1>Simple Demo</h1> -->
-      <!-- <p>Where you wanna go?</p> -->
-      <!-- <img src="../../assets/main-travel.png"/> -->
+      <p>Where you wanna go?</p>
       <video id="myVideo" loop muted data-autoplay>
         <source src="../../assets/main.mp4" type="video/mp4">
       </video>
-			<!-- <h3>fullPage.js videos</h3> -->
   </div>
 </template>
 
@@ -21,8 +18,7 @@
     top:40%;
     color: #fff;
     z-index: 5;
-    font-family: 'Roboto', sans-serif;
-    font-size: 55px;
+    font-size: 40px;
     width :100%;
     transform: translateY(-50%);
   }
