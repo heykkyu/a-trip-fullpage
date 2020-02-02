@@ -1,14 +1,19 @@
 <template>
   <div class="TripPage1">
-    <div class="slide">
-      <p>Where you wanna go?</p>
-      <img alt="Vue logo" src="../../assets/main.mp4">
-    </div>
+      <!-- <h1>Simple Demo</h1> -->
+      <!-- <p>Where you wanna go?</p> -->
+      <!-- <img src="../../assets/main-travel.png"/> -->
+      <video id="myVideo" loop muted data-autoplay>
+        <source src="../../assets/main.mp4" type="video/mp4">
+      </video>
+			<!-- <h3>fullPage.js videos</h3> -->
   </div>
 </template>
 
 <style lang="scss" scoped>
 .TripPage1 {
+  width: 100%;
+  height: 100%;
   position: relative;
   p {
     text-align: center;

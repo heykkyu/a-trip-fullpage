@@ -6,7 +6,7 @@
       >
       </trip-head>
       
-      <full-page :options="options" id="fullpage">
+      <full-page ref="fullpage" :options="options" id="fullpage">
           <div class="section">
             <trip-page1
             
@@ -115,5 +115,8 @@
     }
     a {
         color: #42b983;
+    }
+    * {
+      text-align: center;
     }
 </style>
