@@ -1,0 +1,38 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+
+#fp-nav ul li a span {
+  background: #fff;
+  border: 1px solid gray;
+  opacity: .8;
+}
+.fp-controlArrow {
+  border: none;
+  width: 50px;
+  height: 80px;
+  cursor: pointer;
+  background: url('/../images/chevron.png') no-repeat center;
+  background-size: 100%;
+  &.fp-next {
+    right: 50px;
+  }
+  &.fp-prev {
+    width: 50px;
+    left: 50px;
+    transform: rotate(180deg);
+  }
+  &:hover {
+    opacity: .7;
+  }
+}

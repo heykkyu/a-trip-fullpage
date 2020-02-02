@@ -1,6 +1,9 @@
 <template>
   <div
     class="TripHeader">
+    <span class="site-title">
+      hey.trip
+    </span>
     <ul id="menu">
       <template
         v-for="anchor in anchors"
@@ -27,20 +30,28 @@ export default {
 
 <style lang="scss" scoped>
 .TripHeader {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(256,256,256,1);
+  line-height: 2.5;
+  .site-title {
+    position: absolute;
+    font-weight: bold;
+    left: 30px;
+    font-size: 20px;
+  }
   #menu {
-    position: fixed;
-    margin: 10px;
-    text-align: right; 
-    right:40px;
-    top :10px;
-    padding: 0;
-    z-index: 10;
-    width: 100%;
+    margin: 0;
+    position: absolute;
+    right: 30px;
     li {
       a {
-        color: #fff;
+        color: #1f75fe;
+        font-weight: bold;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 20px;
       }
     }
   }

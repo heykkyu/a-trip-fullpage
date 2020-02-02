@@ -13,18 +13,14 @@
             ></trip-page1>
           </div>
           <div class="section">
-              <div class="slide">
-                  <h3>Slide 2.1</h3>
-              </div>
-              <div class="slide">
-                  <h3>Slide 2.2</h3>
-              </div>
-              <div class="slide">
-                  <h3>Slide 2.3</h3>
-              </div>
+              <trip-page2>
+                
+              </trip-page2>
           </div>
           <div class="section">
-              <h3>Section 3</h3>
+              <trip-page3>
+                
+              </trip-page3>
           </div>
       </full-page>
   </div>
@@ -36,6 +32,8 @@
     components: {
       TripHead: require('./components/pages/Header.vue').default,
       TripPage1: require('./components/pages/Page1.vue').default,
+      TripPage2: require('./components/pages/Page2.vue').default,
+      TripPage3: require('./components/pages/Page3.vue').default,
     },
     data () {
       return {
@@ -47,8 +45,9 @@
           scrollBar: false,
           menu: '#menu',
           navigation: true,
-          anchors: ['Popular', 'New', 'Challenge'],
-          sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab']
+          anchors: ['hey.trip', 'recommend', 'challenge'],
+          slidesNavigation: true,
+		      slidesNavPosition: 'bottom',
         }
       }
     },
@@ -104,20 +103,3 @@
   }
 </script>
 
-<style>
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-    a {
-        color: #42b983;
-    }
-    * {
-      font-family: 'Source Sans Pro', sans-serif;
-      text-align: center;
-    }
-</style>

@@ -1,3 +1,4 @@
+import './assets/css/_common.scss'
 import Vue from 'vue'
 import App from './App.vue'
 import VueFullPage from 'vue-fullpage.js'
