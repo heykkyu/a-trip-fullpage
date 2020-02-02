@@ -2,7 +2,7 @@
   <div class="TripPage1">
     <div class="slide">
       <p>Where you wanna go?</p>
-      <img alt="Vue logo" src="../../assets/main-travel.png">
+      <img alt="Vue logo" src="../../assets/main.mp4">
     </div>
   </div>
 </template>
