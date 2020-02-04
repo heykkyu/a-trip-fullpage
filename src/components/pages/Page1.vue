@@ -1,7 +1,7 @@
 <template>
   <div class="TripPage1">
     <p>Where you wanna go?</p>
-    <video id="myVideo" loop muted data-autoplay>
+    <video id="myVideo" preload loop muted data-autoplay poster="../../assets/main-cover.jpg">
       <source src="../../assets/trip-thumbnail.mp4" type="video/mp4">
     </video>
   </div>
