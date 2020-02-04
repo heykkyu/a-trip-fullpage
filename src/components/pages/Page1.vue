@@ -1,11 +1,21 @@
 <template>
   <div class="TripPage1">
     <p>Where you wanna go?</p>
-    <video id="myVideo" preload loop muted data-autoplay poster="../../assets/main-cover.jpg">
-      <source src="../../assets/trip-thumbnail.mp4" type="video/mp4">
+    <video id="myVideo" preload loop muted data-autoplay>
+      <source :src="`${publicPath}images/trip-thumbnail.mp4`" type="video/mp4">
     </video>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      publicPath: process.env.BASE_URL,
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .TripPage1 {
