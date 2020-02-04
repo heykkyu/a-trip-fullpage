@@ -2,7 +2,7 @@
   <div class="TripPage1">
     <p>Where you wanna go?</p>
     <video id="myVideo" loop muted preload autoplay>
-      <source src="../../assets/main.mp4" type="video/mp4">
+      <source src="../../assets/trip-thumbnail.mp4" type="video/mp4">
     </video>
   </div>
 </template>

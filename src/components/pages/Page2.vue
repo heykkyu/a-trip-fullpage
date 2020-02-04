@@ -3,7 +3,7 @@
     <div v-for="item in list" :key="item"> 
       <div class="slide">
         <p class="city-title">{{item}}</p>
-        <img :src="`${publicPath}images/${item}.jpeg`">
+        <img :src="`${publicPath}images/${item}.jpg`">
       </div>
     </div>
   </div>
