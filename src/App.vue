@@ -45,7 +45,7 @@
           scrollBar: false,
           menu: '#menu',
           navigation: true,
-          anchors: ['hey.trip', 'recommend', 'challenge'],
+          anchors: ['hey.trip', 'scores', 'checking'],
           slidesNavigation: true,
 		      slidesNavPosition: 'bottom',
         }
