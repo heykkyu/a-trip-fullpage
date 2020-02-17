@@ -6,13 +6,13 @@
     </span>
     <ul id="menu">
       <template
-        v-for="anchor in anchors"
+        v-for="(anchor,index) in anchors"
       >
         <li
           :data-menuanchor="anchor"
           :key="anchor">
           <a :href="'#'+anchor">
-            {{anchor}}
+            {{titles[index]}}
           </a>
         </li>
       </template>
@@ -24,6 +24,13 @@
 export default {
   props: {
     anchors: Array
+  },
+  data () {
+    return {
+      titles: [
+        'main', 'scores', 'slider', 'browse' 
+      ]
+    }
   }
 }
 </script>

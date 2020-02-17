@@ -8,9 +8,9 @@
         v-model="value"
         :min="0"
         :max="10"
-        :marks="[0,10]"
       />
     </div>
+    <button class="btn">submit</button>
   </div>
 </template>
 
@@ -34,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 .TripPage3 {
   .slider-title {
-    padding-bottom: 100px;
     font-size: 2rem;
   }
   .slider-wrapper {
@@ -42,6 +41,7 @@ export default {
     min-width: 300px;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 50px 0;
   }
 }
 </style>
