@@ -62,11 +62,24 @@ export default {
         bottom: 0;
         font-size: 0.7rem;
         opacity: 0.7;
+        margin: 0;
       }
     }
     img {
       width: 60%;
       overflow: hidden;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .slide {
+      .pic-text {
+        width: 80%;
+        left: 10%;
+      }
+      img {
+        height: 100vh;
+        width: auto;
+      }
     }
   }
 }

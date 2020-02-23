@@ -1,16 +1,26 @@
 <template>
-  <div class="TripPage3">
-    <p
-      class="slider-title" 
-    > {{sliderTitle}}</p>
-    <div class="slider-wrapper">
-      <vue-slider
-        v-model="value"
-        :min="0"
-        :max="10"
-      />
+  <div class="TripPage3" :class="{active: sliderPage == 2}">
+    <div v-if="sliderPage == 1" class="slidePage1">
+      <p
+        class="slider-title" 
+      > {{sliderTitle}}</p>
+      <div class="slider-wrapper">
+        <vue-slider
+          v-model="sliderValue"
+          :min="0"
+          :max="10"
+        />
+      </div>
+      <button
+        class="btn btn-submit"
+        @click="travelSubmit()"
+      >submit</button>
     </div>
-    <button class="btn">submit</button>
+    <div class="slidePage2" v-else>
+      <p
+        class="slider-title" 
+      >{{sliderResult}}</p>
+    </div>
   </div>
 </template>
 
@@ -24,8 +34,39 @@ export default {
   },
   data () {
     return {
-      value: 5,
-      sliderTitle: 'How much you want to travel now?'
+      sliderValue: 5,
+      sliderPage: 1,
+      sliderTitle: 'How much you want to travel now?',
+      sliderResult: ''
+    }
+  },
+  methods: {
+    travelSubmit () {
+      this.sliderPage = 2;
+
+      switch (this.sliderValue) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+          this.sliderResult = "Okay, then what I can do for you?";
+          break;
+        case 4:
+        case 5:
+        case 6:
+          this.sliderResult = "Guess, you don't know where you are at this time.";
+          break;
+        case 7:
+        case 8:
+        case 9:  
+        case 10:
+          this.sliderResult = "Great!!! Let's go now!!";
+          break;
+
+        default:
+          this.sliderResult = "Refresh, please.";
+          break;
+      }
     }
   }
 }
@@ -33,8 +74,21 @@ export default {
 
 <style lang="scss" scoped>
 .TripPage3 {
+  .sliderPage2 {
+    display: none;
+    opacity: 0;
+  }
+  &.active {
+    .sliderPage2 {
+      display: block;
+      opacity: 1;
+      transition: all 1s ease-in;
+    }
+  }
   .slider-title {
     font-size: 2rem;
+    margin-bottom: 5px;
+
   }
   .slider-wrapper {
     width: 50%;
@@ -43,5 +97,20 @@ export default {
     margin: 0 auto;
     padding: 50px 0;
   }
+  .btn-submit {
+    width: 80px;
+    height: 30px;
+    background: none;
+    border-radius: unset;
+    border: 1px solid gray;
+    color: gray;
+    &:hover,
+    &:active {
+      color: #9cd5ff;
+      border: 1px solid #9cd5ff;
+      cursor: pointer;
+    }
+  }
+  
 }
 </style>

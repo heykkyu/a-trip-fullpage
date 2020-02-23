@@ -47,6 +47,16 @@ export default {
     object-fit: cover;
     z-index: 3;
   }
+  @media screen and (max-width: 768px) {
+    background: url('../../assets/main-cover.jpg') no-repeat center;
+    p {
+      font-size: 1.7rem;
+      top: 47%;
+    }
+    video {
+      display: none;
+    }
+  }
 }
 
 </style>
