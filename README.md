@@ -1,4 +1,5 @@
-# vue-fullpage
+## Vue-Fullpage.js  
+
 
 ## Project setup
 ```
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### fullPage.js plugin by Alvaro Trigo
+This Project is based on Opened and None Commercial. (https://alvarotrigo.com/fullPage)

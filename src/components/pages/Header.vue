@@ -4,12 +4,12 @@
     <span class="site-title">
       hey.trip
     </span>
-    <div class="menu-wrapper">
-      <input type="checkbox" v-model="checked"/>
-      <span></span>
-      <span></span>
-      <span></span>
-      <ul id="menu" :class="{active: checked}">
+      <ul id="menu" >
+        <li class="mobile-lines" :class="{active: checked}"  @click="checked = !checked">
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
         <template
           v-for="(anchor,index) in anchors"
         >
@@ -22,14 +22,19 @@
           </li>
         </template>
       </ul>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    anchors: Array
+    anchors: Array,
+    page: String,
+  },
+  watch: {
+    page () {
+      this.checked = false;
+    }
   },
   data () {
     return {
@@ -56,26 +61,25 @@ export default {
     left: 30px;
     font-size: 20px;
   }
-  .menu-wrapper {
-    input, span {
+ 
+  #menu {
+    margin: 0;
+    position: absolute;
+    right: 30px;
+    .mobile-lines {
       display: none;
     }
-    #menu {
-      margin: 0;
-      position: absolute;
-      right: 30px;
-      li {
+    li {
+      a {
+        color: #1f75fe;
+        opacity: .7;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      &.active {
         a {
-          color: #1f75fe;
-          opacity: .7;
-          font-weight: bold;
-          text-decoration: none;
-          font-size: 20px;
-        }
-        &.active {
-          a {
-            opacity: 1;
-          }
+          opacity: 1;
         }
       }
     }
@@ -85,94 +89,61 @@ export default {
     .site-title {
       color: #1f75fe;
     }
-    .menu-wrapper {
-      input, span {
+    #menu {
+      position: fixed;
+      background: rgba(0,0,0,.4);
+      right: 0;
+      width: 50%;
+      height: 100%;
+      li {
         display: block;
+        margin: 0 5px;
+        text-align: right;
       }
-      display: block;
-      position: relative;
-      z-index: 1;
-      -webkit-user-select: none;
-      user-select: none;
-      float: right;
-      left: unset;
-      right: 15px;
-      width: 33px;
-      text-align: right;
-      top: 15px;
-      #menu {
-        height: 100%;
-        display: none;
-        position: absolute;
-        right: 0;
-        width: 100px;
-        background-color: rgba(0,0,0,0.2);
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        &.active {
-          display: block;
-        }
-        li {
-          display: block;
-        }
-      }
-      a {
-        color: #232323;
-        transition: color 0.3s ease;
-      }
-      input {
+      .mobile-lines {
         display: block;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: -7px;
-        left: -5px;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 2; 
-        -webkit-touch-callout: none;
-      }
-      span {
-        display: block;
-        width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
         position: relative;
-        background: #cdcdcd;
-        border-radius: 3px;
-        z-index: 1;
-        transform-origin: 4px 0px;
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  opacity 0.55s ease;
-        &:first-child {
-          transform-origin: 0% 0%;
+        width: 30px;
+        height: 25px;
+        text-align: right;
+        margin: 15px 5px 15px auto;
+        span {
+          display: inline-block;
+          transition: all .4s;
+          box-sizing: border-box;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: #fff;
+          border-radius: 4px;
+          &:nth-of-type(1) {
+            top: 0;
+          }
+          &:nth-of-type(2) {
+            top: 10px;
+          }
+          &:nth-of-type(3) {
+            bottom: 0;
+          }
         }
-        &:nth-last-child(2) {
-          transform-origin: 0% 100%;
+        &.active {
+          span {
+            &:nth-of-type(1) {
+              -webkit-transform: translateY (10px) rotate (-45deg);
+              transform: translateY(10px) rotate(-45deg);
+            }
+            &:nth-of-type(2) {
+              opacity: 0;
+            }
+            &:nth-of-type(3) {
+              -webkit-transform: translateY(-10px) rotate(45deg);
+              transform: translateY(-10px) rotate(45deg);
+            }
+          }
         }
       }
     }
-  }
-}
-.menu-wrapper {
-  input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-  }
-  input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-  input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-  } 
-  input:checked ~ ul {
-    transform: none;
   }
 }
 </style>

@@ -11,16 +11,19 @@
           :max="10"
         />
       </div>
-      <button
-        class="btn btn-submit"
-        @click="travelSubmit()"
-      >submit</button>
+      
     </div>
     <div class="slidePage2" v-else>
       <p
         class="slider-title" 
       >{{sliderResult}}</p>
     </div>
+    <button
+      class="btn btn-submit"
+      @click="travelSubmit()"
+    >
+      {{sliderPage == 1 ? 'SUBMIT' : 'REVERT'}}
+    </button>
   </div>
 </template>
 
@@ -43,7 +46,6 @@ export default {
   methods: {
     travelSubmit () {
       this.sliderPage = 2;
-
       switch (this.sliderValue) {
         case 0:
         case 1:

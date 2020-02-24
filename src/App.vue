@@ -59,7 +59,7 @@
     methods: {
       afterLoad () {
         console.log('After load')
-        // this.page = fullpage_api.setAllowScrolling(true);
+        this.page = fullpage_api.getActiveSection().anchor;
       },
       toggleNavigation () {
         this.options.navigation = !this.options.navigation
