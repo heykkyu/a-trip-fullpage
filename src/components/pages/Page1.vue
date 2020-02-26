@@ -2,7 +2,11 @@
   <div class="TripPage1">
     <p>Where you wanna go?</p>
     <video id="myVideo" preload loop muted data-autoplay>
-      <source :src="`${publicPath}images/trip-thumbnail.mp4`" type="video/mp4">
+      <!-- cdn -->
+      <source
+        src="https://res.cloudinary.com/dx8hdbmhz/video/upload/v1582684970/trip-thumbnail_pn2xco.mp4" 
+        :onerror="this.src=`${publicPath}images/trip-thumbnail.mp4`" 
+        type="video/mp4">
     </video>
   </div>
 </template>
