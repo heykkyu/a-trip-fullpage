@@ -4,8 +4,8 @@
     <span class="site-title">
       hey.trip
     </span>
-      <ul id="menu" >
-        <li class="mobile-lines" :class="{active: checked}"  @click="checked = !checked">
+      <ul id="menu" :class="{active: checked}" >
+        <li class="mobile-lines"  @click="checked = !checked">
           <span></span>
           <span></span>
           <span></span>
@@ -61,7 +61,6 @@ export default {
     left: 30px;
     font-size: 20px;
   }
- 
   #menu {
     margin: 0;
     position: absolute;
@@ -91,14 +90,38 @@ export default {
     }
     #menu {
       position: fixed;
-      background: rgba(0,0,0,.4);
       right: 0;
-      width: 50%;
-      height: 100%;
+      width: 10%;
+      height: 10%;
       li {
         display: block;
         margin: 0 5px;
         text-align: right;
+        display: none;
+        a {
+          color: #fff;
+        }
+      }
+      &.active {
+        background: rgba(0,0,0,.4);
+        width: 50%;
+        height: 100%;
+        li {
+          display: block;
+        }
+        span {
+            &:nth-of-type(1) {
+              -webkit-transform: translateY (10px) rotate (-45deg);
+              transform: translateY(10px) rotate(-45deg);
+            }
+            &:nth-of-type(2) {
+              opacity: 0;
+            }
+            &:nth-of-type(3) {
+              -webkit-transform: translateY(-10px) rotate(45deg);
+              transform: translateY(-10px) rotate(45deg);
+            }
+          }
       }
       .mobile-lines {
         display: block;
@@ -128,19 +151,7 @@ export default {
           }
         }
         &.active {
-          span {
-            &:nth-of-type(1) {
-              -webkit-transform: translateY (10px) rotate (-45deg);
-              transform: translateY(10px) rotate(-45deg);
-            }
-            &:nth-of-type(2) {
-              opacity: 0;
-            }
-            &:nth-of-type(3) {
-              -webkit-transform: translateY(-10px) rotate(45deg);
-              transform: translateY(-10px) rotate(45deg);
-            }
-          }
+          
         }
       }
     }
