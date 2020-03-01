@@ -89,7 +89,7 @@ export default {
         }
       }
       img {
-        height: 100vh;
+        height: 100%;
         width: auto;
         max-height: unset;
       }
