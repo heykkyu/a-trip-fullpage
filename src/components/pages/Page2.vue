@@ -21,7 +21,7 @@ export default {
       publicPath: process.env.BASE_URL,
       list: ['Paris','Arizona','Budapest','Chicago'],
       ment: [
-        'If you stay here Paris, it becomes youre present.',
+        'If you stay here Paris, it becomes you are present.',
         'Nowhere on this planet is the desert as fascinating as it is in Arizona.',
         'Living in a hot spring like a king.',
         'I give you Chicago. ―H. L. Mencken'

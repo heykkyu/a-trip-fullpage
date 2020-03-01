@@ -90,7 +90,7 @@ export default {
     }
     #menu {
       position: fixed;
-      padding-right: 20px;
+      padding-right: 10px;
       right: 0;
       width: 10%;
       height: 10%;
@@ -105,7 +105,7 @@ export default {
       }
       &.active {
         background: rgba(0,0,0,.4);
-        width: 30%;
+        width: 35%;
         height: 100%;
         li {
           display: block;

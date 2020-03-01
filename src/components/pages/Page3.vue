@@ -1,22 +1,16 @@
 <template>
-  <div class="TripPage3" :class="{active: sliderPage == 2}">
-    <div v-if="sliderPage == 1" class="slidePage1">
+  <div class="TripPage3">
+    <div class="sliderPage">
       <p
-        class="slider-title" 
-      > {{sliderTitle}}</p>
-      <div class="slider-wrapper">
+        class="slider-title"
+      > {{sliderPage == 1 ? sliderTitle : sliderResult}}</p>
+      <div class="slider-wrapper" v-show="sliderPage == 1">
         <vue-slider
           v-model="sliderValue"
           :min="0"
           :max="10"
         />
       </div>
-      
-    </div>
-    <div class="slidePage2" v-else>
-      <p
-        class="slider-title" 
-      >{{sliderResult}}</p>
     </div>
     <button
       class="btn btn-submit"
@@ -24,7 +18,9 @@
     >
       {{sliderPage == 1 ? 'SUBMIT' : 'REVERT'}}
     </button>
+
   </div>
+
 </template>
 
 <script>
@@ -81,17 +77,6 @@ export default {
 
 <style lang="scss" scoped>
 .TripPage3 {
-  .sliderPage2 {
-    display: none;
-    opacity: 0;
-  }
-  &.active {
-    .sliderPage2 {
-      display: block;
-      opacity: 1;
-      transition: all 1s ease-in;
-    }
-  }
   .slider-title {
     font-size: 2rem;
     margin-bottom: 5px;
@@ -123,5 +108,11 @@ export default {
       font-size: 1.2rem;
     }
   }
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 }
 </style>
