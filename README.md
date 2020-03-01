@@ -1,6 +1,7 @@
 ## Project Name : hey.trip (trip-fullpape)
-## Vue.js (vue-cli) / vue-fullpage.js
-## works: get current page, set up styles and whole pages
+Vue.js (vue-cli) / vue-fullpage.js
+works: get current page, set up styles and whole pages
+working time: in a 1 month.
 
 ## Project setup
 ```
