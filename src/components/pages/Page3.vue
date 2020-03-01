@@ -45,6 +45,11 @@ export default {
   },
   methods: {
     travelSubmit () {
+      if (this.sliderPage == 2) {
+        this.sliderPage = 1;
+        return;
+      }
+
       this.sliderPage = 2;
       switch (this.sliderValue) {
         case 0:
@@ -90,14 +95,14 @@ export default {
   .slider-title {
     font-size: 2rem;
     margin-bottom: 5px;
-
+    padding-bottom: 30px;
   }
   .slider-wrapper {
     width: 50%;
     min-width: 300px;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 20px 0 50px 0;
   }
   .btn-submit {
     width: 80px;
@@ -113,6 +118,10 @@ export default {
       cursor: pointer;
     }
   }
-  
+  @media screen and (max-width: 768px) {
+    .slider-title {
+      font-size: 1.2rem;
+    }
+  }
 }
 </style>

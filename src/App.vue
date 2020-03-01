@@ -10,9 +10,8 @@
       id="fullpage"
       :options="options"
       @on-slide-leave="onSlideLeave"
+      @on-leave="onLeave"
     >
-      <!-- @on-leave="getActivePage()" -->
-
       <div 
         class="section"
         :class="item"
@@ -33,10 +32,10 @@
     name: 'app',
     components: {
       TripHead: require('./components/pages/Header.vue').default,
-      TripPage1: require('./components/pages/Page1.vue').default,
-      TripPage2: require('./components/pages/Page2.vue').default,
-      TripPage3: require('./components/pages/Page3.vue').default,
-      TripPage4: require('./components/pages/Page4.vue').default,
+      Page1: require('./components/pages/Page1.vue').default,
+      Page2: require('./components/pages/Page2.vue').default,
+      Page3: require('./components/pages/Page3.vue').default,
+      Page4: require('./components/pages/Page4.vue').default,
     },
     data () {
       return {
@@ -44,22 +43,21 @@
         slide: 0,
         options: {
           licenseKey: 'YOUR_KEY_HERE',
-          afterLoad: this.afterLoad,
-          scrollOverflow: true,
+          scrollOverflow: false,
           scrollBar: false,
           menu: '#menu',
           navigation: true,
-          anchors: ['trip-page1', 'trip-page2', 'trip-page3', 'trip-page4'],
+          anchors: ['page1', 'page2', 'page3', 'page4'],
           slidesNavigation: true,
           slidesNavPosition: 'bottom',
           onSlideLeave: this.onSlideLeave,
+          onLeave: this.onLeave
         }
       }
     },
     methods: {
-      afterLoad () {
-        console.log('After load')
-        this.page = fullpage_api.getActiveSection().anchor;
+      onLeave (origin, destination, direction) {
+        this.page = destination.anchor;
       },
       toggleNavigation () {
         this.options.navigation = !this.options.navigation

@@ -8,6 +8,7 @@
           <p class="pic-desc">pictures taken by heykkyu</p>
         </div>
         <img :src="`${publicPath}images/${item}.jpg`">
+        <p class="img-current">{{index+1}} / {{list.length}}</p>
       </div>
     </div>
   </div>
@@ -67,7 +68,11 @@ export default {
     }
     img {
       width: 60%;
+      max-height: 80%;
       overflow: hidden;
+    }
+    .img-current {
+      display: none;
     }
   }
   @media screen and (max-width: 768px) {
@@ -79,6 +84,16 @@ export default {
       img {
         height: 100vh;
         width: auto;
+        max-height: unset;
+      }
+      .img-current {
+        display: block;
+        position: absolute;
+        bottom: 8%;
+        color: #fff;
+        width: 100%;
+        background:rgba(0, 0, 0, 0.4);
+        padding: 13px;
       }
     }
   }

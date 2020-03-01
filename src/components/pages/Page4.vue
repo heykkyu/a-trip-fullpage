@@ -1,7 +1,8 @@
 <template>
   <div class="TripPage4">
     <div class="sponsers">
-      <p>hey.trip gratefully acknowledges the generosity of our sponsors.<br>
+      <p>
+        <span class="color-blue">hey.trip</span> gratefully acknowledges the generosity of our generous sponsors.<br>
          Their support, along with that of our members, helps make it possible to accomplish all that we do.
       </p>
       <template v-for="item in sponsorImgs"  > 
@@ -16,7 +17,7 @@ export default {
   data () {
     return {
       publicPath: process.env.BASE_URL,
-      sponsorImgs: ['sponser_t1.png','sponser_t2.png','sponser_t3.jpg']
+      sponsorImgs: ['sponser_t2.png','sponser_t1.png','sponser_t3.jpg']
     }
   }
 }
@@ -35,7 +36,7 @@ export default {
     transform: translateY(-50%);
     p {
       width: 80%;
-      font-size: 19px;
+      font-size: 1.4rem;
       margin: 20px auto 50px auto;
     }
     img {
@@ -47,6 +48,16 @@ export default {
         cursor: pointer;
         opacity: .7;
       }
+     
+    }
+     @media screen and (max-width: 768px) {
+      p {
+         font-size: 0.9rem;
+       }
+       img  {
+         display: block;
+         margin: 15px auto;
+       }
     }
   }
 }

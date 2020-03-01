@@ -1,7 +1,12 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
+
 }
+
+$blue: #1f75fe;
+.color-blue { color: $blue;}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -10,19 +15,17 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-
+.fp-slidesNav ul li a span,
 #fp-nav ul li a span {
   background: #fff;
   border: 1px solid gray;
-  opacity: .8;
 }
 .fp-controlArrow {
   border: none;
   width: 50px;
   height: 80px;
   cursor: pointer;
-  background: url('/../images/chevron.png') no-repeat center;
-  background-size: 100%;
+  background: url('/../images/chevron.png') no-repeat center /100%;
   &.fp-next {
     right: 50px;
   }
@@ -35,9 +38,20 @@ li {
     opacity: .7;
   }
   @media screen and (max-width: 768px) { 
-    position: fixed;
-    bottom: 20%;
-    height: 25px;
+    width: 30px;
+    height: 40px;
+    background: url('/../images/chevron-wt.png') no-repeat center /100%;
+    position: absolute;
+    right: 20% !important;
+    bottom: 10%;
+    top: unset;
+    z-index: 5;
+    &.fp-prev {
+      width: 30px;
+      left: 20%;
+      transform: rotate(180deg);
+    }
+    
   }
 }
 

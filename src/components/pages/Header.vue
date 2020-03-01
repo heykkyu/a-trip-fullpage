@@ -90,6 +90,7 @@ export default {
     }
     #menu {
       position: fixed;
+      padding-right: 20px;
       right: 0;
       width: 10%;
       height: 10%;
@@ -104,24 +105,24 @@ export default {
       }
       &.active {
         background: rgba(0,0,0,.4);
-        width: 50%;
+        width: 30%;
         height: 100%;
         li {
           display: block;
         }
         span {
-            &:nth-of-type(1) {
-              -webkit-transform: translateY (10px) rotate (-45deg);
-              transform: translateY(10px) rotate(-45deg);
-            }
-            &:nth-of-type(2) {
-              opacity: 0;
-            }
-            &:nth-of-type(3) {
-              -webkit-transform: translateY(-10px) rotate(45deg);
-              transform: translateY(-10px) rotate(45deg);
-            }
+          &:nth-of-type(1) {
+            -webkit-transform: translateY (10px) rotate (-45deg);
+            transform: translateY(10px) rotate(-45deg);
           }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            -webkit-transform: translateY(-10px) rotate(45deg);
+            transform: translateY(-10px) rotate(45deg);
+          }
+        }
       }
       .mobile-lines {
         display: block;
@@ -138,7 +139,7 @@ export default {
           left: 0;
           width: 100%;
           height: 4px;
-          background-color: #fff;
+          background-color: #1f75fe;
           border-radius: 4px;
           &:nth-of-type(1) {
             top: 0;
@@ -149,9 +150,6 @@ export default {
           &:nth-of-type(3) {
             bottom: 0;
           }
-        }
-        &.active {
-          
         }
       }
     }
