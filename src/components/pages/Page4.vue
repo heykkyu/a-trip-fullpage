@@ -48,16 +48,17 @@ export default {
         cursor: pointer;
         opacity: .7;
       }
-     
     }
      @media screen and (max-width: 768px) {
       p {
-         font-size: 0.9rem;
-       }
-       img  {
-         display: block;
-         margin: 15px auto;
-       }
+        font-size: 0.9rem;
+        margin: 20px auto 30px auto;
+      }
+      img  {
+        height: 40px;
+        display: block;
+        margin: 15px auto;
+      }
     }
   }
 }

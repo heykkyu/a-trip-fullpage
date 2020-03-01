@@ -20,6 +20,7 @@
         <component
           :is="item"
           :slidePage="slide"
+          :mobile="mobile"
         >
       </component>
       </div>
@@ -37,9 +38,17 @@
       Page3: require('./components/pages/Page3.vue').default,
       Page4: require('./components/pages/Page4.vue').default,
     },
+    created() {
+      window.addEventListener('resize', this.resizeBrowse);
+      this.resizeBrowse();
+    },
+    destroyed() {
+      window.removeEventListener('resize', this.resizeBrowse);
+    },
     data () {
       return {
         page: 'page1',
+        mobile: false,
         slide: 0,
         options: {
           licenseKey: 'YOUR_KEY_HERE',
@@ -69,6 +78,9 @@
       onSlideLeave (section, origin, destination, direction) {
         this.slide = origin.index;
         console.log(origin.index)
+      },
+      resizeBrowse () {
+        this.mobile = window.innerWidth <= 800 ? true : false;
       }
     }
   }

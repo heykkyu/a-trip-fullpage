@@ -56,6 +56,7 @@ export default {
       .pic-ment {
         font-size: 1.2rem;
         font-weight: normal;
+        margin: 0 auto 20px 0;
       }
       .pic-desc {
         position: absolute;
@@ -77,9 +78,15 @@ export default {
   }
   @media screen and (max-width: 768px) {
     .slide {
+      .pic-title {
+        font-size: 1.3rem;
+      }
       .pic-text {
         width: 80%;
         left: 10%;
+         .pic-ment {
+          font-size: .8rem;
+        }
       }
       img {
         height: 100vh;

@@ -1,7 +1,7 @@
 <template>
   <div class="TripPage1">
     <p>Where you wanna go?</p>
-    <video id="myVideo" preload loop muted data-autoplay>
+    <video id="myVideo" preload loop muted data-autoplay v-if="!mobile">
       <!-- cdn -->
       <source
         src="https://res.cloudinary.com/dx8hdbmhz/video/upload/v1582684970/trip-thumbnail_pn2xco.mp4" 
@@ -18,6 +18,9 @@ export default {
       publicPath: process.env.BASE_URL,
     }
   },
+  props: {
+    mobile: Boolean
+  }
 }
 </script>
 
