@@ -10,10 +10,10 @@ I've worked with fullpage.js outsorcing project but don't have any copyright.
 This is the reason show you my open source codes.
 
 ## Main Technology Stack
-# Vue.js (vue-cli)
-# fullpage.js
-# SASS(SCSS)
-# Responsible Web
+- Vue.js (vue-cli)
+- fullpage.js
+- SASS(SCSS)
+- Responsible Web
 
 ## Goals
 --
@@ -21,7 +21,7 @@ This is the reason show you my open source codes.
 
 ## Development
 
-# Project setup
+- Project setup
 ```
 npm install
 ```
