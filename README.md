@@ -3,7 +3,9 @@ hey.trip is a fullpage site written in Vue.js and fullpage.js
 
 ## Demo
 https://heykkyu-portfoilo-fullpage-877378.netlify.com
-[![https://youtu.be/8Yh4-ScQLBA](/heykkyu/trip-fullpage/blob/master/public/images/demo-thumb.png?raw=true)](https://youtu.be/8Yh4-ScQLBA)
+
+![thumbnail](https://user-images.githubusercontent.com/46082226/76431134-8901fb80-63f4-11ea-9d71-2d522c091c5e.png)
+
 this site offered by free hosting. Hope you understand a little bit of loading.
 
 ## Motivation
